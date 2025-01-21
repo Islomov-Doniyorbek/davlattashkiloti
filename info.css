@@ -135,11 +135,14 @@ h3 {
     color: #000016;
     font-weight: 700;
     transition: 1.2s;
-    /* padding-left: 15px; */
-    border-left: 5px solid navy;
-    border-bottom: 5px solid navy;
+    padding-left: 15px;
+    border-left: 1.5px solid navy;
+    border-bottom: 1.5px solid navy;
     border-radius: 5px;
-    padding: 10px 5px;
+}
+.section .box:hover p {
+    opacity: 1;
+    bottom: 25%;
 }
 .section .box:hover img {
     filter: blur(4.5px);
@@ -226,73 +229,28 @@ h3 {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* flex-grow: auto; */
+    flex-direction: column;
     gap: 5px;
 }
 .base .kbk {
-    border-radius: 5px;
-    border: 0.8px solid silver;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 350px;
-    height: 300px;
     position: relative;
-    background: rgba(0, 0, 128, 0.848);
-    gap: 8px;
-    transition: 0.8s;
-    overflow: hidden;
+    width: 100%;
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1.3px solid navy;
+    background: linear-gradient(to left, azure, blue, blue,navy, #000016);
 }
-.kbk::after {
-    content: "";
-    position: absolute;
-    transform: rotate(60deg);
-    width: 10%;
-    height: 250%;
-    animation: animo 8s linear infinite;    
-    background: linear-gradient(to right, transparent, rgba(22, 197, 203, 0.607));
-}
-@keyframes animo {
-    0% {
-        transform: translate(-250px, -200px) rotate(60deg);
-    }
-    100% {
-        transform: translate(400px, 300px) rotate(60deg);
-    }
+.kbk p {
+    font-size: 18px;
+    font-weight: 600;
+    color: azure;
 }
 .kbk a {
-    color: gold;
-    font-size: 26px;
-    font-weight: 500;
-    text-align: center;
-    transition: 0.8s;
-}
-.kbk i {
-    -webkit-text-stroke: 0.4px gold;
-    font-size: 44px;
-    color: blue;
-    font-weight: 500;
-}
-
-.kbk:hover {
-    transform: rotateY(20deg);
-    background: rgb(77, 88, 243);
-    /* opacity: 0; */
-}
-.kbk:hover ul{
-    transition: 1.9s ease;
-    opacity: 1;
-}
-/* .kbk:hover a {
-    transform: rotateY(deg);
-} */
-.kbk:hover .fa-link {
-    transition: 1.2s ease;
-    zoom: 1.2;
-}
-.kbk:hover .fa-chevron-circle-left {
-    opacity: 1;
+    text-decoration: none;
+    color: azure;
+    font-size: 18px;
+    font-weight: 600;
 }
 .footer {
     margin-top: 50px;

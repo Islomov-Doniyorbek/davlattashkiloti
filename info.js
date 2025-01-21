@@ -74,14 +74,22 @@ let idoralar = [
     },
 ]
 
+
 for (let i = 0; i < idoralar.length; i++) {
     base.innerHTML += `
         <div class="kbk">
-                <i class="fa fa-link"></i>
-                <a href="./info.html#${idoralar[i].id}" target="_blank" class="context">${idoralar[i].nomi}</a>
-                
+                <p id="${idoralar[i].id}">${idoralar[i].nomi}</p>
+               <br> <p>
+                    Ishonch telefon raqami:  ${idoralar[i].phone}
+                </p><br>
+                <p>
+                Tashkilot manzili:  ${idoralar[i].address}
+                </p>
+                <br> <p>
+                     Internet sahifasi:  <a href="${idoralar[i].email}">${idoralar[i].email}</a>
+                 </p>
         </div>
-    `
+    `;
 }
 }
 base()
